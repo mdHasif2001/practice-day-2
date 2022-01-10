@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                @keyframes sunrise {
+            0%{
+                background-color: red;
+                bottom: 0;
+                transform: scale(1);
+            }
+
+            25%{
+                bottom: 150px;
+                background-color: rgb(247, 112, 1);
+                transform: scale(1.25);
+
+            }
+            50%{
+                bottom:300px;
+                background-color: rgb(224, 162, 68);
+                transform: scale(1.5);
+            }
+            75%{
+                bottom: 450px;
+                background-color: orange;
+                transform: scale(1.75);
+
+            }
+            100%{
+                background-color: yellow;
+                bottom: 600px;
+                transform: scale(2);
+            }
+        }
+        
+        /* background */
+
+                @keyframes background {
+            0%{
+                background-color: black;
+              
+            }
+
+            25%{
+                background-color: orangered;
+
+            }
+            50%{
+                background-color: rgb(197, 146, 127);
+            }
+            75%{
+                background-color: rgb(211, 189, 189);
+
+            }
+            
+            100%{
+                background-color: white;
+            }
+        }
+
+        .ball{
+            width: 70px;
+            height: 70px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            /* transition: 10s; */
+            /* animation: sunrise 10s  ease-in infinite alternate ; */
+            animation: sunrise 5s none linear infinite alternate;
+
+        }
+        div{
+            width: 100%;
+            height: 100%;
+            margin-left: 650px;
+            margin-top: 650px;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            animation: background 5s none linear infinite alternate;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>
